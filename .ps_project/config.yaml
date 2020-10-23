@@ -3,8 +3,7 @@ version: 2
 workflows:
   experiment-workflow:
     steps:
-      -
-        name: "test-experiment"
+      - name: "test-experiment"
         command: experiment.run_single_node
         params:
           command: python run.py
@@ -18,7 +17,7 @@ workflows:
           modelPath: /artifacts
           modelType: Tensorflow
           name: mnist-cli-config-yaml
-      triggers:
+      - triggers:
         tags:
           only:
             - v.*
