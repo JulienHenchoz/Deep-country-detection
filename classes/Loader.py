@@ -13,4 +13,5 @@ class Loader:
             usecols=usecols
         )
         # Remove all accents from columns and force all columns to be interpreted as strings
+        df = Sanitizer.remove_accents(df)
         return df

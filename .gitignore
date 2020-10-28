@@ -1,2 +1,3 @@
 .idea
 datasets/
+classes/__pycache__/
